@@ -22,13 +22,102 @@ html {
   --color-dark-blue-3: hsl(215, 32%, 27%);
   /* line background*/
   --color-white: hsl(0, 0%, 100%);
+  --color-text: rgb(201, 209, 217);
+  --color-price: #00FFF8;
+  --color-grey: #8BACD9;
 }
 
-.attribution {
-  font-size: 11px;
+.container {
+  background-color: var(--color-dark-blue-1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .card {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: var(--color-dark-blue-2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+@media only screen and (max-width: 400px) {
+  .container .card {
+    margin-top: 2rem;
+  }
+}
+.container .card__img {
+  align-self: center;
+  width: 26rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+.container .card__img:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+}
+.container .card__heading {
+  color: var(--color-white);
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  letter-spacing: 0.1rem;
+}
+.container .card__description {
+  color: var(--color-grey);
+  font-size: 1.6rem;
+}
+.container .card__detail {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+.container .card__detail-price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-price);
+}
+.container .card__detail-days {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-grey);
+}
+.container .card__footer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--color-grey);
+  gap: 1rem;
+}
+.container .card__footer-img {
+  width: 3rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-white);
+}
+.container .card__footer span {
+  color: var(--color-white);
+}
+.container .attribution {
+  font-size: 1.6rem;
   text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-white);
 }
-
-.attribution a {
-  color: #3e52a3;
+@media only screen and (max-width: 400px) {
+  .container .attribution {
+    margin-top: 2rem;
+  }
+}
+.container .attribution__link {
+  color: var(--color-grey);
 }/*# sourceMappingURL=style.css.map */

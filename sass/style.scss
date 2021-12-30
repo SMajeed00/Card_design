@@ -20,13 +20,114 @@ html{
   --color-dark-blue-2: hsl(216, 50%, 16%); /* card background*/
   --color-dark-blue-3: hsl(215, 32%, 27%); /* line background*/
   --color-white: hsl(0, 0%, 100%);
+  --color-text: rgb(201, 209, 217);
+  --color-price: #00FFF8;
+  --color-grey: #8BACD9;
 }
 
-.attribution { 
-  font-size: 11px; 
-  text-align: center; 
-}
+.container{
+  background-color: var(--color-dark-blue-1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
-.attribution a {
-  color: hsl(228, 45%, 44%); 
+  .card{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-color: var(--color-dark-blue-2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .4);
+
+    @media only screen and (max-width: 400px) {
+      margin-top: 2rem;
+    }
+
+    &__img{
+      align-self: center;
+      width: 26rem;
+      border-radius: .5rem;
+      transition: all .3s;
+
+      &:hover{
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+        transform: scale(1.01);
+      }
+    }
+
+    &__heading{
+      color: var(--color-white);
+      font-size: 2rem;
+      margin: 1.5rem 0;
+      letter-spacing: .1rem;
+    }
+
+    &__description{
+      color: var(--color-grey);
+      font-size: 1.6rem;
+    }
+
+    &__detail{
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem 0;
+      font-size: 1.5rem;
+      letter-spacing: .1rem;
+
+      &-price{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        color: var(--color-price);
+      }
+
+      &-days{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        color: var(--color-grey);
+      }
+    }
+
+    &__footer{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin: 1rem 0;
+      font-size: 1.4rem;
+      color: var(--color-grey);
+      gap: 1rem;
+
+      &-img{
+        width: 3rem;
+        border-radius: 50%;
+        border: 1px solid var(--color-white);
+
+      }
+
+      span{
+        color: var(--color-white);
+      }
+    }
+  }
+
+  .attribution { 
+    font-size: 1.6rem; 
+    text-align: center;
+    margin-bottom: 2rem; 
+    color: var(--color-white);
+
+    @media only screen and (max-width: 400px) {
+      margin-top: 2rem;
+    }
+
+    &__link {
+      color: var(--color-grey); 
+    }
+  }
 }
