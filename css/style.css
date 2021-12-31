@@ -79,14 +79,18 @@ body {
 .card__detail-price {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   color: var(--color-price);
+}
+.card__detail-price svg {
+  margin-right: 0.5rem;
 }
 .card__detail-days {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   color: var(--color-grey);
+}
+.card__detail-days svg {
+  margin-right: 0.5rem;
 }
 .card__footer {
   display: flex;
