@@ -27,16 +27,14 @@ html {
   --color-grey: #8BACD9;
 }
 
-.container {
-  background-color: var(--color-dark-blue-1);
+body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  background-color: var(--color-dark-blue-1);
+  display: grid;
+  place-items: center;
 }
-.container .card {
-  margin-top: 10rem;
+
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,50 +45,50 @@ html {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
 }
 @media only screen and (max-width: 400px) {
-  .container .card {
+  .card {
     margin-top: 2rem;
   }
 }
-.container .card__img {
+.card__img {
   align-self: center;
   width: 26rem;
   border-radius: 0.5rem;
   transition: all 0.3s;
 }
-.container .card__img:hover {
+.card__img:hover {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   transform: scale(1.01);
 }
-.container .card__heading {
+.card__heading {
   color: var(--color-white);
   font-size: 2rem;
+  font-weight: 600;
   margin: 1.5rem 0;
-  letter-spacing: 0.1rem;
 }
-.container .card__description {
+.card__description {
   color: var(--color-grey);
   font-size: 1.6rem;
 }
-.container .card__detail {
+.card__detail {
   display: flex;
   justify-content: space-between;
   margin: 2rem 0;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
 }
-.container .card__detail-price {
+.card__detail-price {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: var(--color-price);
 }
-.container .card__detail-days {
+.card__detail-days {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: var(--color-grey);
 }
-.container .card__footer {
+.card__footer {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -99,25 +97,27 @@ html {
   color: var(--color-grey);
   gap: 1rem;
 }
-.container .card__footer-img {
+.card__footer-img {
   width: 3rem;
   border-radius: 50%;
   border: 1px solid var(--color-white);
 }
-.container .card__footer span {
+.card__footer span {
   color: var(--color-white);
 }
-.container .attribution {
+
+.attribution {
   font-size: 1.6rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  transform: translateX(-10%);
   color: var(--color-white);
 }
 @media only screen and (max-width: 400px) {
-  .container .attribution {
+  .attribution {
     margin-top: 2rem;
   }
 }
-.container .attribution__link {
+.attribution__link {
   color: var(--color-grey);
 }/*# sourceMappingURL=style.css.map */
